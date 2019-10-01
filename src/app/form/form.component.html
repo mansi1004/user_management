@@ -1,0 +1,98 @@
+<br>
+<br>
+<br>
+
+<div class="center-align">
+    <div>
+        <h1>FORM</h1>
+    </div>
+</div>
+
+<form class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="form-group row center-align">
+        <label class="control-label col-sm-3" for="name">Name:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" ngModel name="name" required>
+        </div>
+    </div>
+
+    <div class="form-group row center-align">
+        <label class="control-label col-sm-3" for="empID">EmployeeID:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="empID" placeholder="Enter empID" ngModel name="empID" required>
+        </div>
+    </div>
+
+    <div class="form-group row center-align">
+        <label class="control-label col-sm-3" for="email">Email:</label>
+        <div class="col-sm-3">
+            <input type="email" 
+            class="form-control" 
+            id="email" 
+            placeholder="Enter email" 
+            ngModel 
+            name="email" 
+            required 
+            email
+            #email="ngModel">
+            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid Email</span>
+        </div>
+    </div>
+
+    <div class="form-group row center-align">
+        <label class="control-label col-sm-3" for="designation">Designation:</label>
+        <div class="col-sm-3">
+            <select class="form-control" ngModel name="designation" >
+                <option>Manager</option>
+                <option>Lead</option>
+                <option>Engineer</option>
+                <option>Trainee</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group row center-align">
+        <label class="control-label col-sm-3" for="present">Present:</label>
+        <div class="col-sm-3">
+            <label class="radio-inline">
+                <input type="radio" ngModel name="present" checked="checked" value="yes">Yes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" ngModel name="present" value="no">No
+            </label>
+        </div>
+    </div>
+
+    <div class="form-group row center-align">
+        <label class="control-label col-sm-3" for="experience">Experience:</label>
+        <div class="col-sm-3" >
+            <label class="radio-inline" >
+                <input type="radio" ngModel name="experience" checked="checked" value="Less than 1 year" display="">Less than 1 year
+            </label>
+            <label class="radio-inline">
+                <input type="radio" ngModel name="experience" value="More than 1 year">More than 1 year
+            </label>
+        </div>
+    </div>
+
+
+    <div class="form-group row center-align">
+        <div > 
+            <button type="submit" class="btn btn-primary" [disabled]="!f.valid"  >Submit</button>
+        </div>
+    </div>
+</form>
+<!-- class="control-label col-sm-3" -->
+
+<!--
+    <hr>
+     <div class="row" *ngIf="submitted">
+    <div class="col-xs-12">
+        <h3>data</h3>
+         <p>{{form.name}}</p>
+        <p>{{form.empID}}</p>
+        <p>{{form.email}}</p>
+        <p>{{form.designation}}</p>
+        <p>{{form.present}}</p>
+        <p>{{form.experience}}</p> 
+    </div>
+</div> -->

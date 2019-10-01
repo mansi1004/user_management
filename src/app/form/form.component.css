@@ -1,0 +1,9 @@
+input.ng-invalid
+{
+ border: 1px salmon;
+}
+
+.center-align{
+    display: flex;
+    justify-content: center;
+}

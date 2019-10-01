@@ -1,0 +1,32 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background : rgba(0,0,0,0.75);
+    z-index: 50;
+}
+
+.alert-box{
+    position: fixed;
+    top: 15vw;
+    left: 70vh;
+    width: 30vw;
+    padding-bottom: 5px;
+    
+    z-index: 100;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.26)
+}
+.alert-box{
+    text-align: right;
+}
+/* .title{
+    background-color: black;
+    text-align: left;
+    color: white;
+    height: 30px;
+    font-size: 150%;
+} */
+
